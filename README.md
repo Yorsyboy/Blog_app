@@ -1,24 +1,36 @@
-# README
+# Blog App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> **Blog App** is an implementation of the classic blog website. It's a full stack ruby on rails website that show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
-Things you may want to cover:
+## Getting Started
+- Run `bundle install` to get the dependencies.
+- Run linter for ruby`rubocop`
+- In auto-correct mode, RuboCop will try to automatically fix offenses:
+`rubocop -A` **OR** `rubocop --auto-correct-all`
+- Run linter for styling `npx stylelint "**/*.{css,scss}"`
+- Run `npx stylelint "**/*.{css,scss}" --fix` to fix linters automatically.
+- Run `rails s` to start interactive the `puma` server.
+- Open `http://localhost:3000` in your browser.
 
-* Ruby version
+## Author
 
-* System dependencies
+👤 **Toyosi Taiwo**
 
-* Configuration
+- GitHub: [@Yorsyboy](https://github.com/Yorsyboy)
+- Twitter: [@tboytaiwo](https://twitter.com/Tboytaiwo)
+- LinkedIn: [Toyosi Taiwo](https://linkedin.com/in/taiwo-toyosi)
 
-* Database creation
+## 🤝 Contributing
 
-* Database initialization
+Contributions, issues, and feature requests are welcome!
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+Feel free to check the [issues page](https://github.com/cynthiainga/blog_app/issues).
 
-* Deployment instructions
+## Show your support
 
-* ...
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Thanks to everyone who will get time to check this project especially to code reviewers.
