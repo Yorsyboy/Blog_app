@@ -1,5 +1,7 @@
 class Post < ApplicationRecord
     belongs_to :user
+    has_many :likes
+    has_many :comments
 
     def increment_counter
         current_user = User.find(user_id)
