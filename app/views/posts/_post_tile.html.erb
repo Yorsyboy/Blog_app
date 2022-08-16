@@ -1,4 +1,5 @@
-<div class="border-black p-4 flex flex-col">
+<% stylesheet_link_tag 'users/index' %>
+<div id="box-border" class="p-4 flex flex-col">
   <h2 class="text-lg mb-4">Post #<%= post.id %></h2>
   <p class="overflow-hidden whitespace-nowrap text-ellipsis"><%= post.text %></p>
   <div class="lex gap-5 self-end">
