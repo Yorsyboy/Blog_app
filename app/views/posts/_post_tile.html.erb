@@ -1,0 +1,8 @@
+<div class="border-black p-4 flex flex-col">
+  <h2 class="text-lg mb-4">Post #<%= post.id %></h2>
+  <p><%= posts.text %></p>
+  <div class="mt-1 flex gap-5 self-end">
+    <p>Comments <%= posts.comments_counter || 0 %></p>
+    <p>Likes <%= posts.likes_counter || 0 %></p>
+  </div>
+</div>
