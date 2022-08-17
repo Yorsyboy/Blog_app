@@ -8,4 +8,12 @@
     </div>
   </div>
   <p><%= post.text %></p>
+  <div class="flex self-end gap-1">
+  <%= link_to new_user_post_comment_path (@user, @post) do %>
+    <button class="h-10 w-32 cursor-pointer">Comment</button>
+  <% end %>
+  <%= form_with model: Like.new, url: user_post_likes_path(@user, @post), method: :post do %>
+    <button class="h-10 w-32 cursor-pointer">Like</button>
+  <% end %>
+  </div>
 </div>
