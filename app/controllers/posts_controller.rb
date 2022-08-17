@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  def new 
+  def new
     @user = current_user
     post = Post.new
     respond_to do |format|
@@ -25,10 +25,10 @@ class PostsController < ApplicationController
       format.html do
         if post.save
           post.increment_counter
-          flash[:success] = "Post created!"
+          flash[:success] = 'Post created!'
           redirect_to user_posts_path(@user)
         else
-          flash.now[:error] = "Post not created!"
+          flash.now[:error] = 'Post not created!'
           render :new, locals: { post: }
         end
       end
