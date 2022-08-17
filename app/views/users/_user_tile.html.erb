@@ -1,4 +1,6 @@
 <% stylesheet_link_tag 'users/index' %>
+
+<%= link_to user do %>
 <div class="flex m-5 h-32 gap-5">
     <div class="w-32 h-full object-cover">
         <img src="<%= user.photo %>" alt="Profile Picture">
@@ -8,3 +10,4 @@
         <p class="text-lg self-end">Number of Posts: <%= user.posts_counter || 0 %></p>
     </div>
 </div>
+<% end %>

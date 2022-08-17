@@ -1,4 +1,6 @@
 <% stylesheet_link_tag 'users/index' %>
+
+<%= link_to user_post_path(user, post) do %>
 <div id="box-border" class="p-4 flex flex-col">
   <h2 class="text-lg mb-4">Post #<%= post.id %></h2>
   <p class="overflow-hidden whitespace-nowrap text-ellipsis"><%= post.text %></p>
@@ -7,3 +9,4 @@
     <p>Likes <%= post.likes_counter || 0 %></p>
   </div>
 </div>
+<% end %>

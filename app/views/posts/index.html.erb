@@ -1,11 +1,15 @@
+<% stylesheet_link_tag 'users/index' %>
 <div class="p-10 flex flex-col gap-7">
   <%= render 'users/user_tile', user: @user %>
+  <div class="mt-0 mr-auto ">
+    <%= link_to new_user_post_path(@user) do %>
+      <button id="box-border" class="p-4 cursor-pointer h-12">Create a new Post</button>
+    <% end %>
+  </div>
   <ul class="list-none flex flex-col gap-7">
     <% @all_posts.each do |post| %>
       <li>
-        <%= link_to user_post_path(@user, post) do %>
-          <%= render 'posts/post_tile', post: post, expanded: false %>
-        <% end %>
+        <%= render 'posts/post_tile', post: post, expanded: false %>
         <%= render 'posts/comments_tile', comments: post.recent_comments %>
       </li>
     <% end %>
