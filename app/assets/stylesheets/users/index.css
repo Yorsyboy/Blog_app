@@ -1,3 +1,20 @@
 #box-border {
   border: 3px solid black;
 }
+
+#add-new-page form {
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#add-new-page input {
+  border: 3px solid black;
+  padding: 15px 10px;
+}
+
+#add-new-page textarea {
+  border: 3px solid black;
+  padding: 15px 10px;
+}

@@ -6,13 +6,18 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
+  <% stylesheet_link_tag "users/index" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
     <main class="container mx-auto mt-28 px-5 flex">
+      <% flash.each do |type, msg| %>
+      <div id="box-border" class="p-4 flex justify-center mt-5 mr-1">
+        <%= msg %>
+      </div>
+      <% end %>
       <%= yield %>
     </main>
   </body>
