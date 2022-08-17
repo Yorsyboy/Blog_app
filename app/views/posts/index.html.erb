@@ -9,7 +9,7 @@
   <ul class="list-none flex flex-col gap-7">
     <% @all_posts.each do |post| %>
       <li>
-        <%= render 'posts/post_tile', post: post, expanded: false %>
+        <%= render 'posts/post_tile', post: post, user: @user, expanded: false %>
         <%= render 'posts/comments_tile', comments: post.recent_comments %>
       </li>
     <% end %>
