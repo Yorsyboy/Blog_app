@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  </head>
-  <body>
-    <h1>You are in posts/show</h1>
-  </body>
-</html>
+<div class="flex flex-col p-10">
+  <%= render 'posts/expanded_post_tile', post: @post %>
+  <%= render 'posts/comments_tile', comments: get_all_comments(@post.id) %>
+</div>

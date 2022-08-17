@@ -1,0 +1,14 @@
+<% stylesheet_link_tag 'users/index' %>
+<div id="box-border" class="p-4">
+  <ul class="flex flex-col gap-1">
+    <% comments.each do |comment| %>
+      <li class="flex gap-3">
+        <p class="font-semibold"><%= get_user_name(comment.user_id) %>:</p>
+        <p class="text-sm"><%= comment.text %></p>
+      </li>
+    <% end %>
+  </ul>
+  <% if comments.length == 0 %>
+    <p>No Comments yet</p>
+  <% end %>
+</div>

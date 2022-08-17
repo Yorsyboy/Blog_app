@@ -1,9 +1,22 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  </head>
-  <body>
-    <h1>You are in users/show</h1>
-  </body>
-</html>
+<% stylesheet_link_tag 'users/index' %>
+<div class="p-10 flex flex-col gap-7">
+  <%= render 'users/user_tile', user: @user %>
+  <div id="box-border" class="p-4 flex flex-col gap-4 border-solid">
+    <p class="text-base font-bold">Bio</p>
+    <p><%= @user.bio %></p>
+  </div>
+   <ul>
+    <% @all_posts.each do |post| %>
+      <li>
+        <%= link_to user_post_path(@user, post) do %>
+          <%= render 'posts/post_tile', post: post %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+  <div class="flex justify-center">
+    <%= link_to user_posts_path(@user) do %>
+      <button id="box-border" class="h-10 w-28 cursor-pointer">See all posts</button>
+    <% end %>
+  </div>
+</div>
