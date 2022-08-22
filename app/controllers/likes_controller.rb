@@ -6,7 +6,6 @@ class LikesController < ApplicationController
     like.post_id = @post.id
     like.user_id = @user.id
     if like.save
-      like.increment_counter
       flash[:success] = 'You liked this post'
     else
       flash[:error] = 'You already liked this post'
