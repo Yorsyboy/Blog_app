@@ -3,7 +3,7 @@
   <ul class="flex flex-col gap-1">
     <% comments.each do |comment| %>
       <li class="flex gap-3">
-        <p class="font-semibold"><%= get_user_name(comment.user_id) %>:</p>
+        <p class="font-semibold"><%= comment.user.name %>:</p>
         <p class="text-sm"><%= comment.text %></p>
       </li>
     <% end %>

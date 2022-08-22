@@ -1,4 +1,4 @@
 <div class="flex flex-col p-10">
   <%= render 'posts/expanded_post_tile', post: @post %>
-  <%= render 'posts/comments_tile', comments: get_all_comments(@post.id) %>
+  <%= render 'posts/comments_tile', comments: @post.comments %>
 </div>
