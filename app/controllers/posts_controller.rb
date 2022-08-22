@@ -26,7 +26,6 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html do
         if post.save
-          post.increment_counter
           flash[:success] = 'Post created!'
           redirect_to user_posts_path(@user)
         else
