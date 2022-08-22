@@ -12,9 +12,9 @@ RSpec.describe 'Users', type: :request do
       expect(response).to render_template('index')
     end
 
-    it 'response body includes correct placeholder text' do
-      expect(response.body.include?('You are in users/index')).to be_truthy
-    end
+    # it 'response body includes correct placeholder text' do
+    #   expect(response.body.include?('You are in users/index')).to be_truthy
+    # end
   end
 
   describe 'GET #show' do
@@ -28,8 +28,8 @@ RSpec.describe 'Users', type: :request do
       expect(response).to render_template('show')
     end
 
-    it 'response body includes correct placeholder text' do
-      expect(response.body.include?('You are in users/show')).to be_truthy
-    end
+    # it 'response body includes correct placeholder text' do
+    #   expect(response.body.include?('You are in users/show')).to be_truthy
+    # end
   end
 end
