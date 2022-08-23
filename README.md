@@ -12,6 +12,11 @@
 - Run `rails s` to start interactive the `puma` server.
 - Open `http://localhost:3000` in your browser.
 
+## Testing
+- bundle exec rspec spec/features to run feature tests
+- bundle exec rspec spec/models to run model tests
+- bundle exec rspec spec/requests to run request tests
+
 ## Author
 
 👤 **Toyosi Taiwo**

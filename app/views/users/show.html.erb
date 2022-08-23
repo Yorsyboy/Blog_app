@@ -5,7 +5,7 @@
     <p class="text-base font-bold">Bio</p>
     <p><%= @user.bio %></p>
     <%= link_to new_user_post_path(@user) do %>
-      <button>Create a new Post</button>
+      <button id="box-border">Create a new Post</button>
     <% end %>
   </div>
    <ul>
@@ -20,4 +20,6 @@
       <button id="box-border" class="h-10 w-32 cursor-pointer">See all posts</button>
     <% end %>
   </div>
+  <%=form_with model: User.new, url: destroy_user_session_path, method: :delete do %> <button class="custom-button">Sign out</button>
+        <% end %>
 </div>
