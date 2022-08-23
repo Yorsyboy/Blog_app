@@ -20,4 +20,6 @@
       <button id="box-border" class="h-10 w-32 cursor-pointer">See all posts</button>
     <% end %>
   </div>
+  <%=form_with model: User.new, url: destroy_user_session_path, method: :delete do %> <button class="custom-button">Sign out</button>
+        <% end %>
 </div>
