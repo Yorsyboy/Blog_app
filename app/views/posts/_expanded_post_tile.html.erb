@@ -9,6 +9,11 @@
   </div>
   <p><%= post.text %></p>
   <div class="flex self-end gap-1">
+    <% if can? :destroy, @post %>
+      <% form_with url: user_post_path(@user, @post), method: :delete do %>
+        <button type="submit" class="h-10 w-32 cursor-pointer">Delete</button>
+      <% end %>
+    <% end %>
   <%= link_to new_user_post_comment_path @user, @post do %>
     <button class="h-10 w-32 cursor-pointer">Comment</button>
   <% end %>
