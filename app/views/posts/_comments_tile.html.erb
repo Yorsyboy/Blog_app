@@ -5,6 +5,11 @@
       <li class="flex gap-3">
         <p class="font-semibold"><%= comment.user.name %>:</p>
         <p class="text-sm"><%= comment.text %></p>
+        <% if can? :destroy, comment %>
+          <%= form_with url: user_post_comment_path(@user, @post, comment), method: :delete do %>
+            <button type="submit" class="h-10 w-32 cursor-pointer">Delete</button>
+          <% end %>
+        <% end %>
       </li>
     <% end %>
   </ul>
