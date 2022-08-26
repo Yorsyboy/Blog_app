@@ -1,6 +1,6 @@
 
 class Api::CommentsController < ApplicationController
-    before_action :authorize_request
+    before_action :authorize!, only: [:index, :show], if: :user_signed_in?
     protect_from_forgery with: :null_session
   
     def index
