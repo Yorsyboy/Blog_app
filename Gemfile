@@ -12,6 +12,8 @@ gem 'cancancan'
 
 gem 'jwt'
 
+gem 'rswag'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
